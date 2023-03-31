@@ -30,13 +30,15 @@
 
           <ul class="menu list">
             <li class="menu-item">
-              <a class="link" href="./index.html">Studio</a>
+              <a class="link menu-link link-studio" href="./index.html"
+                >Studio</a
+              >
             </li>
             <li class="menu-item">
-              <a class="link" href="./portfolio.html">Portfolio</a>
+              <a class="link menu-link" href="./portfolio.html">Portfolio</a>
             </li>
             <li class="menu-item">
-              <a class="link" href="">Contacts</a>
+              <a class="link menu-link" href="">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -55,7 +57,6 @@
         </address>
       </div>
     </header>
-
     <main>
       <!-- Герой -->
       <section class="hero">
@@ -63,7 +64,9 @@
           <h1 class="title hero-title">
             Effective Solutions for Your Business
           </h1>
-          <button class="btn-hero" type="button">Order Service</button>
+          <button class="btn-hero" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <!-- мета та можливості -->
@@ -424,5 +427,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="icon-close" width="8px" height="8px">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
