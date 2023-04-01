@@ -59,6 +59,7 @@ button {
 }
 
 /*------------------- Хедер---------------------------- */
+/* -------------------LOGO------------------------- */
 .page-header-container {
 display: flex;
 align-items: center;
@@ -107,8 +108,8 @@ align-items: center;
 } 
 
 
-.nav > .list .link:hover,
-.nav > .list .link:focus {
+.menu-link:hover,
+.menu-link:focus {
     color: var(--OCEAN);
 }
 .menu {
@@ -117,6 +118,13 @@ align-items: center;
 .menu-item:not(:first-child) {
 margin-left: 40px;
 }
+.menu-link {
+    display: block;
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+
+
 
 .menu-link {
     position: relative;
@@ -126,7 +134,8 @@ margin-left: 40px;
 .link-studio::after {
     position: absolute;
     left: 0;
-    bottom: -26px;
+    bottom: -1px;
+    
 
     content: "";
     display: block;
@@ -138,10 +147,10 @@ margin-left: 40px;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu .link-portfolio,
+/* .menu .link-portfolio,
 .menu .link-studio {
     color: var(--OCEAN);
-}
+} */
 /*----------------------- ADRESS ------------------*/
 .address {
     font-style: normal;
@@ -360,7 +369,8 @@ transition: var(--transition-btn);
     display: flex;
     justify-content: center;
     align-items: center; 
-    transition: var(--transition-btn);
+transition: var(--transition-shadow),
+var(--transition-btn);
 }
 .social-list-link:hover,
 .social-list-link:focus {
@@ -456,7 +466,8 @@ transition: var(--transition-shadow);
     background-color: var(--IRIS);
     justify-content: center;
     align-items: center;
-    transition: var(--transition-btn);
+    transition: var(--transition-btn),
+    var(--transition-shadow);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -501,6 +512,7 @@ margin-bottom: 8px;
     background-color: hsla(240, 69%, 97%, 1);
     border: 1px solid hsla(234, 78%, 95%, 1);
     transition: var(--transition-btn), var(--transition-shadow);
+
 }
 .btn-filter:hover,
 .btn-filter:focus{
@@ -516,13 +528,20 @@ justify-content: center ;
 margin-bottom: 92px;
 gap: 24px;
 }                               
-.project-list-item:hover,       
-.project-link:focus {
+.project-list-item:hover {
     border: 1px solid #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
-}
+    0px 2px 1px rgba(46, 47, 66, 0.08);    
+}           
+.project-link:focus {
+border: 1px solid #F4F4FD;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+}           
+
+
 .project-link:hover .overlay,
 .project-link:focus .overlay {
     transform: translate(0, 0);
